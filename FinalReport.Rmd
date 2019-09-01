@@ -4,7 +4,7 @@ date: "April 1, 2019"
 output:
   pdf_document: default
   html_document: default
-authors: Chandra Keerthi
+author: Chandra Keerthi
 ---
 
 i. What Is Internet Use?...............................................................................................
@@ -21,7 +21,7 @@ knitr::opts_chunk$set(echo = TRUE)
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 
 0. NOTES
-Inner join is used through out this project in order to remove entries with NA. If an entry has NA value(s), the entry is flawed and should not be included in the models.
+Inner join is used through out this project in order to remove entries with "NA". If an entry has NA value(s), the entry is flawed and should not be included in the models.
 
 
 
@@ -58,7 +58,7 @@ world_regions$Region[world_regions$Region=="Asic & Pacific"] <- "Asia & Pacific"
 # popAndInter
 
 
-#ERMOVE REMOVE REMVOE RMEVOE MREOVE MREOVE MREVME OREMVEOV MOER EMO REMOVE THIS
+
 ```
 
 ```{r}
@@ -235,7 +235,7 @@ b4
 gg
 ```
 
-Observation: Looking at these map, we can clearly see that both variables are much higher in North America, Europe and Australia. We can also say that these 2 variables are positively correlated. For example, Saudi Arabia percentage of population with internet is much higher than the rest of the Middle East, while their GDP per capita is also higher than the rest of the region. Secondly, there's clearly a worth-noting difference between the Southern and Northern hemispheres. For example, GDP per capita of USA and European countries is much higher than sub-saharan countries. However, the exception in this observation is Australia, whose both variables are comparable to that of the Northern countries.  
+Observation: Looking at this map, we can clearly see that both variables are much higher in North America, Europe and Australia. We can also say that these 2 variables are positively correlated. For example, Saudi Arabia percentage of population with internet is much higher than the rest of the Middle East, while their GDP per capita is also higher than the rest of the region. Secondly, there's clearly a worth-noting difference between the Southern and Northern hemispheres. For example, GDP per capita of USA and European countries is much higher than sub-saharan countries. However, the exception in this observation is Australia, whose both variables are comparable to that of the Northern countries.  
 
 ```{r}
 #This function is made for the purpose of making comparing the maps before more conveniently
