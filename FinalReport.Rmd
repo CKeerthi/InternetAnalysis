@@ -353,7 +353,7 @@ ggplot(data=regionandintuse,aes(x=reorder(Country, percentWithInter),y=percentWi
 
 
 ```
-Observation: It is very clear that the percentage of population with internet in Northern countries tend to be much higher than the Southern ones. Also, this percentage varies greatly across the globe. There are countries whose this value is close to 0 while many others are close to 1.
+Observation: It is very clear that the percentage of the population with internet in Northern countries tend to be much higher than the Southern ones. Also, this percentage varies greatly across the globe. There are countries whose this value is close to 0 while many others are close to 1.
 
 ```{r}
 regionsummary<-regionandintuse %>% 
