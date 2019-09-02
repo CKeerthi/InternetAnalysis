@@ -18,10 +18,10 @@ iv. Data Exploration............................................................
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent THE printing of the R code that generated the plot.
 
 0. NOTES
-Inner join is used through out this project in order to remove entries with "NA". If an entry has NA value(s), the entry is flawed and should not be included in the models.
+Inner join is used throughout this project in order to remove entries with "NA". If an entry has NA value(s), the entry is flawed and should not be included in the models.
 
 
 
@@ -144,8 +144,8 @@ var(healthAndInternet$`(% OF GDP)`)
 
 ```
 Observation: 
-Firstly, all countries in the Northern Hemisphere have more than 50% of their population have access to the Internet while this variable varies significantly among the countries in the Southern Hemisphere. Generally, Health expenditure of Northern countries are higher than that of Southern ones. Despite this difference, many countries whose population's access to the Internet is spend proportionally as much of their GDP on the Health sector. Upon further observation, we can see that the corellations between these 2 variables are different in each hemisphere. In the north, they strongly, positively correlated. In the south, however, there is little correlation. If we assume that the percentage of the population that has access to the Internet impacts or is impacted by health expenditure, it would imply that there are other factors which holds significant sway on the Southern countries that does not affect these numbers in the Northern ones. 
-Correlation coefficient = 0.27: Globally, there is a weak positive correllation between these variables. 
+Firstly, all countries in the Northern Hemisphere have more than 50% of their population have access to the Internet while this variable varies significantly among the countries in the Southern Hemisphere. Generally, the Health expenditure of Northern countries is higher than that of the Southern ones. Despite this difference, many countries whose population's access to the Internet is spent proportionally as much of their GDP on the Health sector. Upon further observation, we can see that the correlation between these 2 variables is different in each hemisphere. In the north, they strongly, positively correlated. In the south, however, there is little correlation. If we assume that the percentage of the population that has access to the Internet impacts or is impacted by health expenditure, it would imply that there are other factors that hold significant sway on the Southern countries that do not affect these numbers in the Northern ones. 
+Correlation coefficient = 0.27: Globally, there is a weak positive correlation between these variables.
 
 
 
@@ -161,10 +161,10 @@ demo_int_corr_S.plot <- demo_int_corr_S.plot + scale_x_continuous(name = "Democr
 #The graph
 demo_int_corr_S.plot
 
-#Correlation Coeeficient
+#Correlation Coefficient
 cor(demo_int_corr$Score, demo_int_corr$percentWithInter)
 ```
-Observation: At first glance, for democracy score from 0 to 3.5, the percentage of population with internet access is moderately, positively correlated. However, from 3.5 to about 4.8, it is moderately, negatively correlated. From 4.8 onward, this percentage increases rapidly as democracy score increases. Also, we can clearly see that the higher the democracy score, the lower is the range percentage and vice versa.
+Observation: At first glance, for democracy scores from 0 to 3.5, the percentage of the population with internet access is moderately, positively correlated. However, from 3.5 to about 4.8, it is moderately, negatively correlated. From 4.8 onward, this percentage increases rapidly as the democracy score increases. Also, we can clearly see that the higher the democracy score, the lower is the range percentage and vice versa.
 Correlation coefficient = 0.59: globally, these 2 variables are moderately, positively correlated.
 
 ```{r}
@@ -235,7 +235,7 @@ b4
 gg
 ```
 
-Observation: Looking at this map, we can clearly see that both variables are much higher in North America, Europe and Australia. We can also say that these 2 variables are positively correlated. For example, Saudi Arabia percentage of population with internet is much higher than the rest of the Middle East, while their GDP per capita is also higher than the rest of the region. Secondly, there's clearly a worth-noting difference between the Southern and Northern hemispheres. For example, GDP per capita of USA and European countries is much higher than sub-saharan countries. However, the exception in this observation is Australia, whose both variables are comparable to that of the Northern countries.  
+Observation: Looking at this map, we can clearly see that both variables are much higher in North America, Europe, and Australia. We can also say that these 2 variables are positively correlated. For example, Saudi Arabia's percentage of the population with the internet is much higher than the rest of the Middle East, while their GDP per capita is also higher than the rest of the region. Secondly, there's clearly a worth-noting difference between the Southern and Northern hemispheres. For example, GDP per capita of the USA and European countries is much higher than in sub-Saharan countries. However, the exception in this observation is Australia, whose both variables are comparable to that of the Northern countries.  
 
 ```{r}
 #This function is made for the purpose of making comparing the maps before more conveniently
@@ -290,12 +290,13 @@ cor(lifeandint$percentWithInter,lifeandint$AGE)
 
 
 ```
-Observation:
+Observations:
 a. The scatter plot
-At first glance, countries with higher percentage of population with internet access have higher age expectancy. Not only that, similar to the previous graph, as the percentage of population who has internet access increases, the range of the age expectancy get drastically more narrow. For example, at close to 1.00, most countries' age expectancy lie between 75 and 85, while at 0.25, it varies from above 50 to close to 80. Upon another look, we can see that the upper echelon of both variables are mostly occupied by Northern Hemisphere countries.
+At first glance, countries with a higher percentage of the population with internet access have a higher age expectancy. Not only that, similar to the previous graph, as the percentage of the population who has internet access increases, the range of the age expectancy gets drastically more narrow. For example, at close to 1.00, most countries' age expectancy lies between 75 and 85, while at 0.25, it varies from above 50 to close to 80. Upon another look, we can see that the upper echelon of both variables is mostly occupied by Northern Hemisphere countries.
+	
 
 b. The boxplot:
-The drastic difference in sizes of these 2 boxes is due to the fact that there are many more countries in the Southern hemisphere than in the Northern one. Just as stated in the scatterplot, the age expectancy of the Global South is much higher than GLobal North. The age expectancy of the majority of countries in the South lies between about 64 and 77, while that of the North lies between 78 and 82. 
+The drastic difference in sizes of these 2 boxes is due to the fact that there are many more countries in the Southern hemisphere than in the Northern one. Just as stated in the scatterplot, the age expectancy of the Global South is much higher than the Global North. The age expectancy of the majority of countries in the South lies between about 64 and 77, while that of the North lies between 78 and 82.  
 
 ```{r}
 econ_int<-inner_join(gdpppp_cia2017,internetusers_cia2017,"Country")
@@ -321,7 +322,8 @@ ggplot(econ_int)+geom_smooth(mapping=aes(x=`GDP - PER CAPITA (PPP)`,y=`INTERNET 
 
 ```
 Observations:
-As you can see from the graph above, as the GDP per capita increases, the number of internet users increases exponentially, but when the GDP per capita surpasses 50000, the number of internet users starts to decrease. When we observe the smooth graph, we can see that this decrease is due to a large variance in data caused by outliers. Thus, as the GDP per capita increases, we oberve a generally small internet usage because these outliers are small countries that produced more capital than required for the country.
+	As you can see from the graph above, as the GDP per capita increases, the number of internet users increases exponentially, but when the GDP per capita surpasses 50000, the number of internet users starts to decrease. When we observe the smooth graph, we can see that this decrease is due to a large variance in data caused by outliers. Thus, as the GDP per capita increases, we observed generally small internet usage because these outliers are small countries that produced more capital than required for the country.
+  
 ```{r}
 health_int<-inner_join(healthexpend_cia2017,internetusers_cia2017,"Country")
 
